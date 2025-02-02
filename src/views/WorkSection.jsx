@@ -3,13 +3,13 @@ import InfiniteMenu from "../components/infinite-menu";
 
 const items = [
   {
-    image: "/nwlaptop.png",
+    image: "/public/nwlaptop.png",
     link: "https://www.nwlaptopmadiun.com/",
     title: "NW Laptop",
     description: "Catalogue and CMS admin for laptop store",
   },
   {
-    image: "/Padipos.png",
+    image: "/public/Padipos.png",
     link: "https://kasir-fe.vercel.app/",
     title: "PadiPos",
     description: "Cashier system for small business",
