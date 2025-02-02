@@ -3,13 +3,15 @@ import InfiniteMenu from "../components/infinite-menu";
 
 const items = [
   {
-    image: "/public/nwlaptop.png",
+    image:
+      "/firebase-storage/v0/b/np-v1-b94f5.appspot.com/o/WhatsApp%20Image%202025-02-01%20at%2011.40.16.jpeg?alt=media&token=d3c22b13-6dce-4f50-9cc7-7fab13f91a47",
     link: "https://www.nwlaptopmadiun.com/",
     title: "NW Laptop",
     description: "Catalogue and CMS admin for laptop store",
   },
   {
-    image: "/public/Padipos.png",
+    image:
+      "/firebase-storage/v0/b/np-v1-b94f5.appspot.com/o/WhatsApp%20Image%202025-02-01%20at%2011.21.33.jpeg?alt=media&token=77ec4283-c645-43c6-8867-8cf28357dbf1",
     link: "https://kasir-fe.vercel.app/",
     title: "PadiPos",
     description: "Cashier system for small business",
