@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8358fe;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e3af2;
+}
+
+@theme {
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-scrollX: scrollX 60s linear infinite;
+  --animate-scrollY: scrollY 60s linear infinite;
+  --animate-shine: shine 5s linear infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes scrollX {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scrollY {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+}
+
+@layer utilities {
+  .mask-horizontal {
+    @apply [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]
+            [mask-size:cover]
+            [mask-repeat:no-repeat];
+  }
+
+  .mask-vertical {
+    @apply [mask-image:linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_20%,rgba(0,0,0,1)_80%,rgba(0,0,0,0)_100%)]
+            [mask-size:cover]
+            [mask-repeat:no-repeat];
+  }
+
+  .paused .animate-scrollX,
+  .paused .animate-scrollY {
+    animation-play-state: paused !important;
+  }
+
+  .reverse-x {
+    animation-direction: reverse;
+    animation-delay: -3s;
+  }
+}
